@@ -5,17 +5,7 @@ import {Row, Col} from 'react-flexbox-grid';
 
 class MainView extends React.Component {
   // componentDidMount() {
-  //   let config = {
-  //     headers: {
-  //       "Access-Control-Allow-Origin": "*",
-  //       "Access-Control-Allow-Credentials": true,
-  //       "Access-Control-Allow-Methods": "*",
-  //       'Content-Type':'application/json',
-  //       'Access-Control-headers': 'Authorization',
-  //       'Access-Control-headers': 'Content-Type',
-  //       'Accept':'application/json',
-  //     }
-  //   }
+
 
   //   let url ='https://3hkaob4gkc.execute-api.us-east-1.amazonaws.com/prod/au-hackathon/accounts'
   //   Axios
