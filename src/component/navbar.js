@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import {Link, Route} from 'react-router-dom'
+import MainView from '../container/MainView';
+import {AccountsView} from '../test-accounts-view'
 
-class Navbar extends React.Component {
-  render() {
-    return <h1>Team 9</h1>;
-  }
-}
+export const Navbar= () => (
+  <nav>
+      <Link to='/dashboard'>{'Dashboard '}</Link>
+      <Link to='/accounts'>{'Accounts'}</Link>
 
-export default Navbar;
+      <Route path='/dashboard' component={MainView} />
+      <Route path='/accounts' component={AccountsView} />
+  </nav>
+)
