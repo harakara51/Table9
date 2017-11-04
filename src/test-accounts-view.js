@@ -12,7 +12,7 @@ export class AccountsView extends Component {
     render() {
         return (
             <div>
-                {'hello world'}
+                {'test-accounts-view: displaying accounts to console...'}
             </div>
         )
     }
