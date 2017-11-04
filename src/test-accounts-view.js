@@ -1,13 +1,17 @@
 import React, {Component} from 'react'
-import {getAccounts} from './data-layer/accounts'
+import {getAccounts, getCustomers} from './data-layer'
 
 export class AccountsView extends Component {
     constructor(props) {
         super(props)
     }
     componentDidMount() {
-        const accounts = getAccounts()
-            .then((accounts) => console.log('accounts', accounts))
+        getAccounts()
+            .then((accounts) => getAccounts(accounts[0]))
+
+        getCustomers()
+            .then((customers) =>
+                getCustomers(customers[0].customer_id[0]))
     }
     render() {
         return (
