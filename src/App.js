@@ -14,7 +14,6 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <Navbar />
-          <MainView/>
           <Tabs/>
           <AccountsView/>
         </div>
