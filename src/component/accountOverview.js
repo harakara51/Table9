@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper';
 import {Row, Col} from 'react-flexbox-grid';
 import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
+import Avatars from './avatars';
 
 
 
@@ -14,6 +15,7 @@ class AccountOverview extends React.Component {
           <h1>Account Overview</h1>
           <Row>
           <Col xsOffset={1} xs={5}>
+            <Avatars/>
             <TextField
               id="first_name"
               defaultValue="# 234324234"
