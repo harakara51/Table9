@@ -1,13 +1,19 @@
+Get api running
+- git clone git@github.com:pcgilday/hackathon-table9-api.git
+- yarn install
+- yarn start
+
+Should see: "Example app listening on port 5000!"
 
 
-## Get started
-- `close repo`
-- `npm install`
-- `npm start`
+- git clone (this repo)
+- yarn install
+- yarn run
 
 
 
-#### from create-react-app below
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
