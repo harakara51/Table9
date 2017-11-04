@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AccountOverview from '../component/accountOverview';
 import ChildAccountOverview from '../component/childAccountOverview';
+import Linechart from '../component/linechart';
 import Axios from 'axios';
 import {Row, Col} from 'react-flexbox-grid';
 
@@ -12,7 +13,7 @@ class MainView extends React.Component {
   //   Axios
   //     .post(url, config)
   //     .then(res => {console.log(res)})
-  // } 
+  // }
   render() {
     return (
       <div>
@@ -25,8 +26,11 @@ class MainView extends React.Component {
 </Row>
 <Row>
 <ChildAccountOverview/>
-</Row>
 
+</Row>
+<Row>
+<Linechart/>
+</Row>
       </div>
     );
   }
