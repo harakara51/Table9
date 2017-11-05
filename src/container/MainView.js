@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AccountOverview from '../component/accountOverview';
 import ChildAccountOverview from '../component/childAccountOverview';
 import Linechart from '../component/linechart';
+import PieChart from '../component/piechart';
 import Axios from 'axios';
 import {Row, Col} from 'react-flexbox-grid';
 
@@ -30,6 +31,9 @@ class MainView extends React.Component {
 </Row>
 <Row>
 <Linechart/>
+</Row>
+<Row>
+<PieChart/>
 </Row>
       </div>
     );
