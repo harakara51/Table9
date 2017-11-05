@@ -4,16 +4,17 @@ import {
     get,
     map,
 } from 'lodash'
-import React, {Component} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 import {Container, Box} from 'rebass'
-import renderIf from 'render-if'
+import {DataLoader} from './data-loader'
 import {getAccounts, getCustomers} from '../data-layer'
+
 
 const AccountsView = ({accounts}) => (
     <Container>
         {map(accounts, (account) => (
-            <Box py='2' key={account}>
+            <Box py={2} key={account}>
                 <Link to={`/accounts/${account}`}>
                     {account}
                 </Link>
@@ -22,30 +23,17 @@ const AccountsView = ({accounts}) => (
     </Container>
 )
 
-
-export class Accounts extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {accounts: null}
-    }
-    componentDidMount() {
-        getAccounts()
-            .then((accounts) =>
-               this.setState({accounts})
-            )
-    }
-    render() {
-        const {accounts} = this.state
-        return (
-            <div>
-                {accounts === null ? null : <AccountsView accounts={accounts}/>}
-            </div>
-        )
-    }
-}
+export const Accounts = () => (
+    <DataLoader apiCall={getAccounts} >
+        {(data) => (
+            <AccountsView accounts={data} />
+        )}
+    </DataLoader>
+)
 
 
 type AccountModel = {
+    authorized_users: Array<{customer_id: number, credit_card_number: string}>,
     balance: number,
     card_type: string,
     credit_limit: number,
@@ -54,7 +42,13 @@ type AccountModel = {
 }
 
 
+const AuthorizedUserView = ({customerId}) => (
+    <Container>
+    </Container>
+)
+
 const AccountView = ({
+    authorized_users,
     balance,
     card_type,
     credit_limit,
@@ -82,31 +76,26 @@ const AccountView = ({
             {'rewards earned: '}
             {total_rewards_earned}
         </Box>
+        <Box>
+            {'authorized_users: '}
+            <Box pl={2}>
+                {map(authorized_users, ({customer_id, credit_card_number}) => (
+                    <Box>
+                        {'customer id: '}
+                        {customer_id}
+                    </Box>
+
+                ))}
+            </Box>
+        </Box>
     </Container>
 )
 
-export class Account extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {account: null}
-    }
+export const Account = ({match}) => (
+    <DataLoader apiCall={getAccounts} params={{id: get(match, 'params.id')}} >
+        {(data) => (
+            <AccountView {...data[0]} />
+        )}
+    </DataLoader>
+)
 
-    componentDidMount() {
-        console.log('this.props', this.props)
-        const id = get(this.props, 'match.params.id')
-        getAccounts(id)
-            .then((account) => {
-                console.log('account ', account)
-                this.setState({account: account[0]})
-            })
-    }
-
-    render() {
-        const {account} = this.state
-        return (
-            <div>
-                {account === null ? null : <AccountView {...account}/>}
-            </div>
-        )
-    }
-}
