@@ -1,6 +1,5 @@
 import React from 'react';
 import LinearProgress from 'material-ui/LinearProgress';
-import {Row, Col} from 'react-flexbox-grid';
 
 export default class LinearProgressExampleDeterminate extends React.Component {
 

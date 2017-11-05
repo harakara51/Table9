@@ -10,7 +10,7 @@ import {white, blue500} from 'material-ui/styles/colors';
 import SearchBox from './SearchBox';
 import {Link, Route} from 'react-router-dom'
 import MainView from '../container/MainView';
-import Child from '../container/ChildView';
+import Child from '../container/childView';
 import {Accounts, Account} from '../component/accounts-view'
 
 class Header extends React.Component {

@@ -6,6 +6,10 @@ import MapsPersonPin from 'material-ui/svg-icons/maps/person-pin';
 import PhoneIcon from 'material-ui/svg-icons/communication/phone';
 import GoalsIcon from 'material-ui/svg-icons/action/done';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import UsageTab from './usage';
+import GoalsTab from './goals';
+import RewardsTab from './rewards';
+
 
 
 // style={styles.headline}
@@ -35,46 +39,13 @@ function handleActive(tab) {
 const InfoTabs = ({children}) => (
   <Tabs>
     <Tab icon={<PhoneIcon/>} label="USAGE">
-      <Grid fluid>
-        <Row center="xs">
-          <Col xs>
-            <h2>Credit Usage</h2>
-            <Row center="xs">
-              <Col xs>
-                  {children[0]}
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Grid>
+      <UsageTab />
     </Tab>
     <Tab icon={<GoalsIcon/>} label="GOALS">
-    <Grid fluid>
-        <Row center="xs">
-          <Col xs>
-            <h2>Hit those Goals!</h2>
-            <Row center="xs">
-              <Col xs>
-                  {children[1]}
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Grid>
+      <GoalsTab />      
     </Tab>
     <Tab icon={<MapsPersonPin />} label="REWARDS">
-    <Grid fluid>
-        <Row center="xs">
-          <Col xs>
-            <h2>Check out your Rewards!</h2>
-            <Row center="xs">
-              <Col xs>
-                  {children[2]}
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Grid>
+      <RewardsTab />    
     </Tab>
   </Tabs>
 );

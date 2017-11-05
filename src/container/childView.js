@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import AccountOverview from '../component/account-overview'
 import {Row, Col} from 'react-flexbox-grid';
 import Tabs from '../component/tabs';
+import UsageBar from '../component/usage-bar'
+
 
 
 class ChildView extends React.Component {
@@ -16,12 +18,14 @@ class ChildView extends React.Component {
   } 
   render() {
   return (
-    <div> <Tabs>
-    <AccountOverview />
-    <AccountOverview />
-    <AccountOverview />
-</Tabs>
-</div>)
+    <div> 
+      <Tabs>
+        <UsageBar />
+        <AccountOverview />
+        <AccountOverview />
+      </Tabs>
+    </div>
+  )
     
 }
 }
