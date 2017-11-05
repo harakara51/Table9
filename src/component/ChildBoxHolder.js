@@ -19,9 +19,12 @@ class ChildBoxHolder extends React.Component {
       currenPatient: null,
       open: false
     };
+    this.handleClick = this.handleClick.bind(this);
   }
   handleClick (data) {
     console.log("send to new View");
+
+    window.location = '/child/666';
 
   }
 
@@ -45,9 +48,9 @@ class ChildBoxHolder extends React.Component {
           {this
             .props
             .data
-            .map(customer => <div key={customer.id}>
+            .map(customer => <div key={customer.customer_id}>
   
-            <InfoBox onClike = {this.handleClick.bind(this, customer)} className = "infoBox" data = {customer} Icon={CreditCard} color={orange600} title= "Account #" value={customer.customer_id}/>
+            <InfoBox onClick = {this.handleClick.bind(this, customer)} className = "infoBox" data = {customer} Icon={CreditCard} color={orange600} title= "Account #" value={customer.customer_id}/>
             </div>)
           }
           </Row>

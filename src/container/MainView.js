@@ -46,6 +46,8 @@ class MainView extends React.Component {
     if (this.state.data && this.state.transactions) {
       return  (
         <div>
+          <div className ="margin">
+            </div>
           <Row>
             
           <Col xs={3} sm={3} md={3} lg={3} className="transactionSelector">

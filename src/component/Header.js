@@ -35,8 +35,10 @@ class Header extends React.Component {
     };
 
     return (
-        <div>
+        <div className ="header">
+          
           <Route path='/dashboard' component={MainView} />
+      
       <Route exact path='/accounts' component={Accounts} />
       <Route exact path='/accounts/:id' component={Account} />
       <Route exact path='/child/:id' component={Child} />

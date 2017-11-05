@@ -80,7 +80,7 @@ class App extends Component {
             <div style={styles.container}>
               {this.props.children}
             </div>
-            <MainView/>
+            
               </div>
       </MuiThemeProvider>
     )
