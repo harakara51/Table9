@@ -55,13 +55,13 @@ class AccountOverview extends React.Component {
           <Col xsOffset={1} xs={5}>
             <TextField
               id="first_name"
-              defaultValue={this.props.data.total_rewards_earned}
+              defaultValue={parseFloat(Math.round(this.props.data.total_rewards_earned * 100) / 100).toFixed(2)}
               floatingLabelText="Rewards Earned"/>
           </Col>
           <Col xs={3}>
             <TextField
               id="last_name"
-              defaultValue={this.props.data.total_rewards_used}
+              defaultValue={parseFloat(Math.round(this.props.data.total_rewards_used * 100) / 100).toFixed(2)}
               floatingLabelText="total rewards used"/>
           </Col>
         </Row>

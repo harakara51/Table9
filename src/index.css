@@ -3,3 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.transactionSelector {
+  height: 82vh;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+.test {
+  margin: 0;
+  padding: 0;
+  width: 30%
+}
