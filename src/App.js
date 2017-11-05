@@ -42,17 +42,17 @@ class App extends Component {
         icon: <Assessment/>,
         link: '/dashboard'
       }, {
-        text: 'Form Page',
+        text: 'Manage Accounts',
         icon: <Web/>,
         link: '/form'
       }, {
-        text: 'Table Page',
+        text: 'Planning',
         icon: <GridOn/>,
         link: '/table'
       }, {
-        text: 'Login Page',
+        text: 'Manage Rewards',
         icon: <PermIdentity/>,
-        link: '/login'
+        link: '/quest'
       }
     ]
     let { navDrawerOpen } = this.state;

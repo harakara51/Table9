@@ -28,7 +28,6 @@ const AvatarExampleSimple = () => (
     size={60}
     style={style}
     >
-    A
   </Avatar>
 );
 

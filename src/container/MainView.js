@@ -47,35 +47,36 @@ class MainView extends React.Component {
       return  (
         <div>
           <Row>
+            
           <Col xs={3} sm={3} md={3} lg={3} className="transactionSelector">
             <Sidebar
               data={this.state.transactions[0].customers[0].transactions  }/>
           </Col>
           <Col xs={9} sm={9} md={6} lg={9}>
 
-        <Row>
-        <Col xs={8} sm={8} md={8} lg={8}>
+              <Row>
+              <Col xs={8} sm={8} md={8} lg={8}>
 
-      <AccountData mainAccount = {this.state.data}/>
-      </Col>
-      <Col xs={3} sm={3} md={3} lg={3}>
-      <Row>
-      <InfoBox className = "infoBox" Icon={CreditCard} color={pink600} title="Credit History" value="748"/>
-      </Row>
-      <Row>
-      <InfoBox className = "infoBox" Icon={Assessment}
-                   color={purple600}
-                   title="Rewards Point"
-                   value="460"
-          />
-          </Row>
-      </Col>
-      </Row>
-      <Row>
-        <Col xs={12} sm={12} md={12} lg={12}>
-      <ChildBoxHolder data= {this.state.data[0].authorized_users}/>
-      </Col>
-      </Row>
+            <AccountData mainAccount = {this.state.data}/>
+            </Col>
+            <Col xs={3} sm={3} md={3} lg={3}>
+            <Row>
+            <InfoBox className = "infoBox" Icon={CreditCard} color={pink600} title="Credit History" value="748"/>
+            </Row>
+            <Row>
+            <InfoBox className = "infoBox" Icon={Assessment}
+                        color={purple600}
+                        title="Rewards Point"
+                        value="460"
+                />
+                </Row>
+            </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={12} md={12} lg={12}>
+            <ChildBoxHolder data= {this.state.data[0].authorized_users}/>
+            </Col>
+            </Row>
       </Col>
       </Row>
       </div>
