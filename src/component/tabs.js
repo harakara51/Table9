@@ -36,23 +36,49 @@ const TabsExampleIconText = () => (
   <Tabs>
     <Tab icon={<PhoneIcon/>} label="USAGE">
       <Grid fluid>
-        <Row>
-          <Col xs={12}>
-              <h2>Tab One</h2>
+        <Row center="xs">
+          <Col xs>
+            <h2>Credit Usage</h2>
+            <Row center="xs">
+              <Col xs>
                 <p>This is an example</p>
                 <p>Random HTMl incoming!!!!!</p>              
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Grid>
     </Tab>
-    <Tab
-      icon={<GoalsIcon/>}
-      label="GOALS"
-    />
-    <Tab
-      icon={<MapsPersonPin />}
-      label="REWARDS"
-    />
+    <Tab icon={<GoalsIcon/>} label="GOALS">
+    <Grid fluid>
+        <Row center="xs">
+          <Col xs>
+            <h2>Hit those Goals!</h2>
+            <Row center="xs">
+              <Col xs>
+                <p>This is an example</p>
+                <p>Random HTMl incoming!!!!!</p>              
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Grid>
+    </Tab>
+    <Tab icon={<MapsPersonPin />} label="REWARDS">
+    <Grid fluid>
+        <Row center="xs">
+          <Col xs>
+            <h2>Check out your Rewards!</h2>
+            <Row center="xs">
+              <Col xs>
+                <p>This is an example</p>
+                <p>Random HTMl incoming!!!!!</p>              
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Grid>
+    </Tab>
   </Tabs>
 );
 
