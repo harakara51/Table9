@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import Drawer from 'material-ui/Drawer';
 import {spacing, typography} from 'material-ui/styles';
-import {white, blue600} from 'material-ui/styles/colors';
+import {black, blue600} from 'material-ui/styles/colors';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom'
 import Avatar from 'material-ui/Avatar';
@@ -21,7 +21,7 @@ const LeftDrawer = (props) => {
       height: 56
     },
     menuItem: {
-      color: white,
+      color: blue600,
       fontSize: 14
     },
     avatar: {
@@ -38,7 +38,7 @@ const LeftDrawer = (props) => {
       span: {
         paddingTop: 12,
         display: 'block',
-        color: 'white',
+        color: 'black',
         fontWeight: 300,
         textShadow: '1px 1px #444'
       }

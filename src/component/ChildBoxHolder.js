@@ -20,6 +20,10 @@ class ChildBoxHolder extends React.Component {
       open: false
     };
   }
+  handleClick (data) {
+    console.log("send to new View");
+
+  }
 
   render() {
     const styles = {
@@ -43,7 +47,7 @@ class ChildBoxHolder extends React.Component {
             .data
             .map(customer => <div key={customer.id}>
   
-            <InfoBox className = "infoBox" data = {customer} Icon={CreditCard} color={orange600} title= "Account #" value={customer.customer_id}/>
+            <InfoBox onClike = {this.handleClick.bind(this, customer)} className = "infoBox" data = {customer} Icon={CreditCard} color={orange600} title= "Account #" value={customer.customer_id}/>
             </div>)
           }
           </Row>

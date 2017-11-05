@@ -11,5 +11,6 @@ export const Navbar= () => (
       <Route path='/dashboard' component={MainView} />
       <Route exact path='/accounts' component={Accounts} />
       <Route exact path='/accounts/:id' component={Account} />
+      <Route exact path='/child/:id' component={Account} />
   </nav>
 )

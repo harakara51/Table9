@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
@@ -9,6 +8,10 @@ import Menu from 'material-ui/svg-icons/navigation/menu';
 import ViewModule from 'material-ui/svg-icons/action/view-module';
 import {white, blue500} from 'material-ui/styles/colors';
 import SearchBox from './SearchBox';
+import {Link, Route} from 'react-router-dom'
+import MainView from '../container/MainView';
+import Child from '../container/ChildView';
+import {Accounts, Account} from '../component/accounts-view'
 
 class Header extends React.Component {
 
@@ -33,6 +36,10 @@ class Header extends React.Component {
 
     return (
         <div>
+          <Route path='/dashboard' component={MainView} />
+      <Route exact path='/accounts' component={Accounts} />
+      <Route exact path='/accounts/:id' component={Account} />
+      <Route exact path='/child/:id' component={Child} />
             <AppBar
               style={{...styles, ...style.appBar}}
               title={
