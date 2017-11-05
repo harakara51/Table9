@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper';
 import {Row, Col} from 'react-flexbox-grid';
 import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
+import Avatars from './avatars';
 
 
 
@@ -29,7 +30,7 @@ class AccountOverview extends React.Component {
               defaultValue={this.props.data.account_id}
               floatingLabelText="Account Id"/>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             <TextField
               id="last_name"
               defaultValue={this.props.data.primary_user_card_number}

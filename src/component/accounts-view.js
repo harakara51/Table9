@@ -6,13 +6,13 @@ import {
 } from 'lodash'
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Container, Box} from 'rebass'
+import {Container, Box, Border, Text} from 'rebass'
 import {DataLoader} from './data-loader'
+import {Customer} from './customer-view'
 import {getAccounts, getCustomers} from '../data-layer'
 
 
 const AccountsView = ({accounts}) => (
-    <div> 
     <Container>
         {map(accounts, (account) => (
             <Box py={2} key={account}>
@@ -20,9 +20,8 @@ const AccountsView = ({accounts}) => (
                     {account}
                 </Link>
             </Box>
-        ))} 
-     </Container>
-     </div>
+        ))}
+    </Container>
 )
 
 export const Accounts = () => (
@@ -43,11 +42,6 @@ type AccountModel = {
     total_rewards_used: number,
 }
 
-
-const AuthorizedUserView = ({customerId}) => (
-    <Container>
-    </Container>
-)
 
 const AccountView = ({
     authorized_users,
@@ -81,12 +75,8 @@ const AccountView = ({
         <Box>
             {'authorized_users: '}
             <Box pl={2}>
-                {map(authorized_users, ({customer_id, credit_card_number}) => (
-                    <Box>
-                        {'customer id: '}
-                        {customer_id}
-                    </Box>
-
+                {map(authorized_users, ({customer_id}) => (
+                    <Customer id={customer_id} />
                 ))}
             </Box>
         </Box>
