@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
+import {Provider as ThemeProvider} from 'rebass'
 import logo from './logo.svg';
 import {Navbar} from './component/navbar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {AccountsView} from './test-accounts-view';
 import Tabs from './component/tabs';
-
-
-
 
 class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <div className="App">
-          <Navbar />
-          <Tabs/>
-          <AccountsView/>
-        </div>
+          <ThemeProvider>
+              <Navbar />
+          </ThemeProvider>
       </MuiThemeProvider>
-    );
+    )
   }
 }
 

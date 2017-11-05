@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Link, Route} from 'react-router-dom'
 import MainView from '../container/MainView';
-import {AccountsView} from '../test-accounts-view'
+import {Accounts, Account} from '../component/accounts-view'
 
 export const Navbar= () => (
   <nav>
@@ -9,6 +9,7 @@ export const Navbar= () => (
       <Link to='/accounts'>{'Accounts'}</Link>
 
       <Route path='/dashboard' component={MainView} />
-      <Route path='/accounts' component={AccountsView} />
+      <Route exact path='/accounts' component={Accounts} />
+      <Route exact path='/accounts/:id' component={Account} />
   </nav>
 )

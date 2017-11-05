@@ -3,12 +3,12 @@ import fetch from 'node-fetch'
 
 const apiUrl = 'http://localhost:5000'
 
-export function getAccounts(id) {
+export function getAccounts({id} = {}) {
     return fetch(id ? `${apiUrl}/accounts/${id}` : `${apiUrl}/accounts`)
         .then(res => res.json())
 }
 
-export function getCustomers(id) {
+export function getCustomers({id} = {}) {
     return fetch(id ? `${apiUrl}/customers/${id}` : `${apiUrl}/customers`)
         .then(res => res.json())
 }
