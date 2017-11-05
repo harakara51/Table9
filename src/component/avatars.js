@@ -25,7 +25,7 @@ const AvatarExampleSimple = () => (
   <Avatar
     color={deepOrange300}
     backgroundColor={purple500}
-    size={30}
+    size={60}
     style={style}
     >
     A

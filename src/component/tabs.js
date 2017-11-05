@@ -5,8 +5,10 @@ import FontIcon from 'material-ui/FontIcon';
 import MapsPersonPin from 'material-ui/svg-icons/maps/person-pin';
 import PhoneIcon from 'material-ui/svg-icons/communication/phone';
 import GoalsIcon from 'material-ui/svg-icons/action/done';
+import {Grid, Row, Col} from 'react-flexbox-grid';
 
 
+// style={styles.headline}
 
 const styles = {
   headline: {
@@ -15,6 +17,15 @@ const styles = {
     marginBottom: 12,
     fontWeight: 400,
   },
+  paragraph: {
+    marginTop: 16,
+    marginBottom: 12,
+  },
+  pages: {
+    height: 300,
+    width: 900,
+    padding: 1, 
+  }
 };
 
 function handleActive(tab) {
@@ -24,11 +35,15 @@ function handleActive(tab) {
 const TabsExampleIconText = () => (
   <Tabs>
     <Tab icon={<PhoneIcon/>} label="USAGE">
-      <div>
-        <h2 style={styles.headline}>Tab One</h2>
-        <p>This is an example</p>
-        <p>Random HTMl incoming!!!!!</p>
-      </div>
+      <Grid fluid>
+        <Row>
+          <Col xs={12}>
+              <h2>Tab One</h2>
+                <p>This is an example</p>
+                <p>Random HTMl incoming!!!!!</p>              
+          </Col>
+        </Row>
+      </Grid>
     </Tab>
     <Tab
       icon={<GoalsIcon/>}
