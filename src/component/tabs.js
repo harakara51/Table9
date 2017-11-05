@@ -24,7 +24,7 @@ const styles = {
   pages: {
     height: 300,
     width: 900,
-    padding: 1, 
+    padding: 1,
   }
 };
 
@@ -32,7 +32,7 @@ function handleActive(tab) {
   alert(`A tab with this route property ${tab.props['data-route']} was activated.`);
 }
 
-const InfoTabs = () => (
+const InfoTabs = ({children}) => (
   <Tabs>
     <Tab icon={<PhoneIcon/>} label="USAGE">
       <Grid fluid>
@@ -41,8 +41,7 @@ const InfoTabs = () => (
             <h2>Credit Usage</h2>
             <Row center="xs">
               <Col xs>
-                <p>This is an example</p>
-                <p>Random HTMl incoming!!!!!</p>              
+                  {children[0]}
               </Col>
             </Row>
           </Col>
@@ -56,8 +55,7 @@ const InfoTabs = () => (
             <h2>Hit those Goals!</h2>
             <Row center="xs">
               <Col xs>
-                <p>This is an example</p>
-                <p>Random HTMl incoming!!!!!</p>              
+                  {children[1]}
               </Col>
             </Row>
           </Col>
@@ -71,8 +69,7 @@ const InfoTabs = () => (
             <h2>Check out your Rewards!</h2>
             <Row center="xs">
               <Col xs>
-                <p>This is an example</p>
-                <p>Random HTMl incoming!!!!!</p>              
+                  {children[2]}
               </Col>
             </Row>
           </Col>

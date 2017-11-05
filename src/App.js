@@ -13,7 +13,11 @@ class App extends Component {
       <MuiThemeProvider>
           <ThemeProvider>
               <Navbar />
-              <Tabs />
+              <Tabs>
+                  <AccountOverview />
+                  <AccountOverview />
+                  <AccountOverview />
+              </Tabs>
           </ThemeProvider>
       </MuiThemeProvider>
     )
