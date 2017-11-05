@@ -33,7 +33,6 @@ export const Accounts = () => (
 )
 
 
-
 type AccountModel = {
     authorized_users: Array<{customer_id: number, credit_card_number: string}>,
     balance: number,
