@@ -9,15 +9,12 @@ import Divider from 'material-ui/Divider';
 class ChildBox extends React.Component {
 
   render() {
+      console.log(this);
     const cardStyle = {
-      minHeight: 200,
-      padding: 10,
-      margin: 25
+
     };
 
-    const inputSyle = {
-      maxWidth: "100%"
-    }
+
     return (
       <div>
         <Paper style={cardStyle} zDepth={3}>
@@ -26,14 +23,14 @@ class ChildBox extends React.Component {
           <Col xsOffset={1} xs={5}>
             <TextField
               id="first_name"
-              defaultValue={this.props.data.account_id}
-              floatingLabelText="Account Id"/>
+              defaultValue={this.props.data.credit_card_number}
+              floatingLabelText="credit_card_number"/>
           </Col>
           <Col xs={3}>
             <TextField
               id="last_name"
-              defaultValue={this.props.data.primary_user_card_number}
-              floatingLabelText="primary user's cardnumber"/>
+              defaultValue={this.props.data.customer_id}
+              floatingLabelText="customer_id"/>
           </Col>
         </Row>
 

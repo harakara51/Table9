@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import AccountOverview from '../component/accountOverview';
+import ChildBoxHolder from '../component/ChildBoxHolder';
+
 import Axios from 'axios';
 import {Row, Col} from 'react-flexbox-grid';
 import {getAccounts} from '../data-layer'
 
 
 const AccountData =(props) => {
-  
+
   return (
     <div>
     <Row>
@@ -32,9 +34,17 @@ class MainView extends React.Component {
       
   } 
   render() {
-
     if (this.state.data) {
-      return <AccountData mainAccount = {this.state.data}/>;
+      return  (
+        <div>
+        <Row>
+      <AccountData mainAccount = {this.state.data}/>
+      </Row>
+      <Row>
+      <ChildBoxHolder data= {this.state.data[0].authorized_users}/>
+      </Row>
+      </div>
+      )
     }
     return <h1> Loading </h1>
   }
