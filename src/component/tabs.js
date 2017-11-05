@@ -32,7 +32,7 @@ function handleActive(tab) {
   alert(`A tab with this route property ${tab.props['data-route']} was activated.`);
 }
 
-const TabsExampleIconText = () => (
+const InfoTabs = () => (
   <Tabs>
     <Tab icon={<PhoneIcon/>} label="USAGE">
       <Grid fluid>
@@ -82,4 +82,4 @@ const TabsExampleIconText = () => (
   </Tabs>
 );
 
-export default TabsExampleIconText;
+export default InfoTabs;
