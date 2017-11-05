@@ -11,6 +11,7 @@ class ChildBox extends React.Component {
   render() {
       console.log(this);
     const cardStyle = {
+    
 
     };
 
@@ -18,7 +19,6 @@ class ChildBox extends React.Component {
     return (
       <div>
         <Paper style={cardStyle} zDepth={3}>
-          <h1>Account Overview</h1>
           <Row>
           <Col xsOffset={1} xs={5}>
             <TextField
