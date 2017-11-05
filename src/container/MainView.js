@@ -2,40 +2,42 @@ import React, { Component } from 'react';
 import AccountOverview from '../component/accountOverview';
 import Axios from 'axios';
 import {Row, Col} from 'react-flexbox-grid';
+import {getAccounts} from '../data-layer'
 
-class MainView extends React.Component {
-  // componentDidMount() {
-  //   let config = {
-  //     headers: {
-  //       "Access-Control-Allow-Origin": "*",
-  //       "Access-Control-Allow-Credentials": true,
-  //       "Access-Control-Allow-Methods": "*",
-  //       'Content-Type':'application/json',
-  //       'Access-Control-headers': 'Authorization',
-  //       'Access-Control-headers': 'Content-Type',
-  //       'Accept':'application/json',
-  //     }
-  //   }
 
-  //   let url ='https://3hkaob4gkc.execute-api.us-east-1.amazonaws.com/prod/au-hackathon/accounts'
-  //   Axios
-  //     .post(url, config)
-  //     .then(res => {console.log(res)})
-  // } 
-  render() {
-    return (
-      <div>
-        <Row>
-  <Col xs={12} sm={3} md={2} lg={1} />
-  <Col xs={6} sm={6} md={8} lg={10} >
-  <AccountOverview/>
-  </Col>
-  <Col xs={6} sm={3} md={2} lg={1} />
+const AccountData =(props) => {
+  return (
+    <div>
+    <Row>
+<Col xs={12} sm={3} md={2} lg={1} />
+<Col xs={6} sm={6} md={8} lg={10} >
+<AccountOverview data ={props.mainAccount[0]}/>
+</Col>
+<Col xs={6} sm={3} md={2} lg={1} />
 </Row>
 
-      </div>
-    );
+  </div>
+  )
+
+};
+class MainView extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {data: null}
+}
+  componentDidMount() {
+    getAccounts({"id":103600000}).then((res) => {
+      this.setState({data:res})});
+      
+  } 
+  render() {
+
+    if (this.state.data) {
+      return <AccountData mainAccount = {this.state.data}/>;
+    }
+    return <h1> Loading </h1>
   }
+    
 }
 
 export default MainView;

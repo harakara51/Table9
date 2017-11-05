@@ -12,6 +12,7 @@ import {getAccounts, getCustomers} from '../data-layer'
 
 
 const AccountsView = ({accounts}) => (
+    <div> 
     <Container>
         {map(accounts, (account) => (
             <Box py={2} key={account}>
@@ -19,8 +20,9 @@ const AccountsView = ({accounts}) => (
                     {account}
                 </Link>
             </Box>
-        ))}
-    </Container>
+        ))} 
+     </Container>
+     </div>
 )
 
 export const Accounts = () => (
