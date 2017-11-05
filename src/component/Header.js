@@ -10,7 +10,7 @@ import {white, blue500} from 'material-ui/styles/colors';
 import SearchBox from './SearchBox';
 import {Link, Route} from 'react-router-dom'
 import MainView from '../container/MainView';
-import Child from '../container/childView';
+import Child from '../container/ChildView';
 import {Accounts, Account} from '../component/accounts-view'
 
 class Header extends React.Component {
@@ -36,11 +36,10 @@ class Header extends React.Component {
 
     return (
         <div>
-      <Route path='/dashboard' component={MainView} />
+          <Route path='/dashboard' component={MainView} />
       <Route exact path='/accounts' component={Accounts} />
       <Route exact path='/accounts/:id' component={Account} />
       <Route exact path='/child/:id' component={Child} />
-
             <AppBar
               style={{...styles, ...style.appBar}}
               title={
