@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AccountOverview from '../component/accountOverview';
+import AccountOverview from '../component/account-overview';
 import Axios from 'axios';
 import {Row, Col} from 'react-flexbox-grid';
 
@@ -21,7 +21,7 @@ class MainView extends React.Component {
   //   Axios
   //     .post(url, config)
   //     .then(res => {console.log(res)})
-  // } 
+  // }
   render() {
     return (
       <div>

@@ -16,12 +16,12 @@ class AccountOverview extends React.Component {
           <Col xs={12}>
             <Row center="xs">
               <Col xs={6}>
-                <h1>Account Overview</h1>
+                <h1>Account Overview</h1>                
               </Col>
             </Row>
           </Col>
         </Row>
-
+        
         <Row>
           <Col xsOffset={1} xs={2}>
             <Avatars/>
